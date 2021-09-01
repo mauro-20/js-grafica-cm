@@ -18,8 +18,10 @@ squareGenerator(squareNumber)
 
 // al clik il quadrato diventa rosso ed appare un alert() con il numero del quadrato selezionato
 field.addEventListener('click',
-function (e) {
-  e.target.classList.add('clicked')
-  alert(e.target.innerHTML)
- }
+  function (e) {
+    if (!e.target.classList.contains('clicked')) {
+      e.target.classList.add('clicked')
+      alert(e.target.innerHTML)
+    }
+  }  
 )
