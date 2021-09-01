@@ -7,6 +7,7 @@ function squareGenerator(num) {
   for (var i = 1; i <= num; i++){
     field.innerHTML += `<div class="square">${i}</div>`
   }
+  field.style.width = `${Math.ceil(Math.sqrt(num)) * 100}px`
   
 }
 
